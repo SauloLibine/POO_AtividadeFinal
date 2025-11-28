@@ -48,12 +48,9 @@ public class Main {
                     } catch (NumberFormatException e) {
                         System.out.println("Número inválido! Definido como 0.");
                     }
-                    
-                    System.out.print("Plano: ");
-                    String plano = sc.nextLine();
 
                     try {
-                        Socio novoSocio = new Socio(nome, cpf, email, numeroSocio, plano);
+                        Socio novoSocio = new Socio(nome, cpf, email, numeroSocio);
                         dao.salvarSocio(novoSocio); 
                         System.out.println("Sócio cadastrado com sucesso no banco!");
                     } catch (Exception e) {

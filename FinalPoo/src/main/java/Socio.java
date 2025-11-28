@@ -1,11 +1,10 @@
 public class Socio extends Pessoa {
     private int numeroSocio;
-    private String plano;
 
-    public Socio(String nome, String cpf, String email, int numeroSocio, String plano) {
+
+    public Socio(String nome, String cpf, String email, int numeroSocio) {
         super(nome, cpf, email);
         this.numeroSocio = numeroSocio;
-        this.plano = plano;
     }
 
     public int getNumeroSocio() {
@@ -16,19 +15,11 @@ public class Socio extends Pessoa {
         this.numeroSocio = numeroSocio;
     }
 
-    public String getPlano() {
-        return plano;
-    }
-
-    public void setPlano(String plano) {
-        this.plano = plano;
-    }
 
     public void exibirInfo() {
         System.out.println("Nome: " + getNome());
         System.out.println("CPF: " + getCpf());
         System.out.println("Número do Sócio: " + numeroSocio);
-        System.out.println("Plano: " + plano);
     }
 
     @Override
@@ -37,8 +28,7 @@ public class Socio extends Pessoa {
                 "nome='" + getNome() + '\'' +
                 ", cpf='" + getCpf() + '\'' +
                 ", email='" + getEmail() + '\'' +
-                ", numeroSocio=" + numeroSocio +
-                ", plano='" + plano + '\'' +
-                '}';
+                ", numeroSocio=" + numeroSocio 
+                + '}';
     }
 }

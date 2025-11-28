@@ -42,7 +42,6 @@ public class PessoaDAO {
 
                 psS.setString(1, socio.getCpf());
                 psS.setInt(2, socio.getNumeroSocio());
-                psS.setString(3, socio.getPlano());
                 psS.executeUpdate();
                 
                 conn.commit();
@@ -66,8 +65,7 @@ public class PessoaDAO {
                     rs.getString("nome"),
                     rs.getString("cpf"),
                     rs.getString("email"),
-                    rs.getInt("numeroSocio"),
-                    rs.getString("plano")
+                    rs.getInt("numeroSocio")
                 ));
             }
         } catch (SQLException e) {
